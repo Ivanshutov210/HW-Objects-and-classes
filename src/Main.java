@@ -3,9 +3,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        Author author1 = new Author("Александр", "Пушкин");
-        Author author2 = new Author("Лев", "Толстой");
-        Author author3 = new Author("Николай","Гогль");
+        Author author1 = new Author(" Александр", "Пушкин ");
+        Author author2 = new Author(" Лев", "Толстой ");
+        Author author3 = new Author(" Николай","Гогль ");
 
         Book book1 = new Book("Пиковая дама", author1, 1854);
         Book book2 = new Book("Война и мир", author2, 1869);
