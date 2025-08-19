@@ -5,17 +5,19 @@ public class Main {
 
         Author author1 = new Author(" Александр", "Пушкин ");
         Author author2 = new Author(" Лев", "Толстой ");
-        Author author3 = new Author(" Николай","Гогль ");
+
 
         Book book1 = new Book("Пиковая дама", author1, 1854);
         Book book2 = new Book("Война и мир", author2, 1869);
-        Book book3 =new Book("Мертвые Души",author3,1835);
+        Book book3 =new Book("Мертвые Души",new Author("Николай","Гогль"),1835);
 
-        book1.setPublicationYear(1934);
+        System.out.println("Книга 1: " + book1);
+        System.out.println("Книга 2: " + book2);
 
+        System.out.println("book1.equals(book2): " + book1.equals(book2));
+        System.out.println("book1.equals(book3): " + book1.equals(book3));
 
-        System.out.println("Книга: " + book1.getTitle() + ", Автор: " + book1.getAuthor().getFirstName() + " " + book1.getAuthor().getLastName() + ", Год публикации: " + book1.getPublicationYear());
-        System.out.println("Книга: " + book2.getTitle() + ", Автор: " + book2.getAuthor().getFirstName() + " " + book2.getAuthor().getLastName() + ", Год публикации: " + book2.getPublicationYear());
-        System.out.println("Книга: " + book3.getTitle() + ", Автор: " + book3.getAuthor().getFirstName() + " " + book3.getAuthor().getLastName() + ", Год публикации: " + book3.getPublicationYear());
+        System.out.println("book1.hashCode(): " + book1.hashCode());
+        System.out.println("book3.hashCode(): " + book3.hashCode());
     }
 }
