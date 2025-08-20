@@ -9,12 +9,15 @@ public class Main {
 
         Book book1 = new Book("Пиковая дама", author1, 1854);
         Book book2 = new Book("Война и мир", author2, 1869);
+        Book book3 =new Book("Мертвые Души",new Author("Николай","Гогль"),1835);
 
+        System.out.println("Книга 1: " + book1);
+        System.out.println("Книга 2: " + book2);
 
-        book1.setPublicationYear(1934);
+        System.out.println("book1.equals(book2): " + book1.equals(book2));
+        System.out.println("book1.equals(book3): " + book1.equals(book3));
 
-
-        System.out.println("Книга: " + book1.getTitle() + ", Автор: " + book1.getAuthor().getFirstName() + " " + book1.getAuthor().getLastName() + ", Год публикации: " + book1.getPublicationYear());
-        System.out.println("Книга: " + book2.getTitle() + ", Автор: " + book2.getAuthor().getFirstName() + " " + book2.getAuthor().getLastName() + ", Год публикации: " + book2.getPublicationYear());
+        System.out.println("book1.hashCode(): " + book1.hashCode());
+        System.out.println("book3.hashCode(): " + book3.hashCode());
     }
 }
