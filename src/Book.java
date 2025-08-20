@@ -31,6 +31,7 @@ public class Book {
         return "\"" + title + "\" by " + author.toString() + " (" + publicationYear + ")";
     }
 
+
     public boolean equals (Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
@@ -39,7 +40,7 @@ public class Book {
                 title.equals(book.title) &&
                 author.equals(book.author);
     }
-
+    @Override
     public int hashCode() {
         return Objects.hash(title, author, publicationYear);
     }
