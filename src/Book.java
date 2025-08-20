@@ -26,12 +26,12 @@ public class Book {
     public void setPublicationYear(int publicationYear) {
         this.publicationYear = publicationYear;
     }
-
+    @Override
     public String toString() {
         return "\"" + title + "\" by " + author.toString() + " (" + publicationYear + ")";
     }
 
-
+    @Override
     public boolean equals (Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
